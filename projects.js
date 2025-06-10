@@ -42,10 +42,10 @@ function fetchRepos() {
   fetch("https://api.github.com/users/sithid/repos")
     .then((response) => response.json())
     .then((data) => {
-      // 'data' will be an array of your public repositories
       console.log(data);
 
-      const projectsList = document.getElementById("projects-list"); // Assuming you have a div with this ID
+      const projectsList = document.getElementById("projects-list");
+      
       data.forEach((repo) => {
         const data = {
           name: repo.name || "Repo name is missing.",
