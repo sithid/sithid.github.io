@@ -39,13 +39,13 @@ function createProjectCard(projectData) {
 function fetchRepos() {
   allCards.replaceChildren();
 
-  fetch("https://api.github.com/users/sithid/repos")
+  fetch("https://api.github.com/users/sithid/repos?sort=updated&direction=desc")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
 
       const projectsList = document.getElementById("projects-list");
-      
+
       data.forEach((repo) => {
         const data = {
           name: repo.name || "Repo name is missing.",
