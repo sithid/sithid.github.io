@@ -115,3 +115,8 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
+
+#project-link {
+  color: #007bff;
+  text-decoration: underline;
+}
